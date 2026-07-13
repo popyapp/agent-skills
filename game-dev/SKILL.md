@@ -20,7 +20,9 @@ and gives feedback. Never batch a week of work into one unverifiable drop.
    user can't describe the core loop, propose one.
 2. **Audience + accessibility bar** — age range; are low-vision / blind /
    deaf players first-class? (Recommended default: low-vision kids are a
-   primary audience.)
+   primary audience.) **If blind players are in scope**, layer the
+   [`blind-playable-games`](../blind-playable-games/) skill ON TOP of this
+   process — this skill is complete without it.
 3. **Platform + orientation** — tablet/phone, landscape/portrait, iOS/Android.
 4. **Art style** — soft clay 3D (AI-generated, recommended), vector, or the
    user's own art. Languages (recommend at least two from day one).
@@ -33,11 +35,11 @@ dynamic** (make it honestly educational — real-world trade-offs like
 cheap-but-slow vs instant-but-pricey, wages, operating costs), an ASCII
 screen layout, art direction + logo concept, and an M1→M4 roadmap.
 
-In the same step, open the [`blind-playable-games`](../blind-playable-games/)
-skill and instantiate its template as `docs/accessibility.md` — the contract
-for two independent audio channels, the self-voicing first-launch narration
-question, the global narration gesture, screen-reader detection, and icon
-rules. The design doc references that contract.
+If blind players are in scope (per the discovery answers), this is the
+moment to bring in the optional [`blind-playable-games`](../blind-playable-games/)
+layer: it instantiates its own `docs/accessibility.md` contract and adds
+its rules on top of the design doc. If they're not in scope, skip it — the
+process continues unchanged.
 
 ### Accessibility principles (non-negotiable in every game)
 

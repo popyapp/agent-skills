@@ -1,9 +1,15 @@
 ---
 name: blind-playable-games
-description: A non-negotiable rule set and project-start format for designing games that blind and low-vision children can actually play. Instantiates a docs/accessibility.md contract at project start; enforces two independent audio channels, a self-voicing first-launch narration question, a global narration gesture, screen-reader detection, and icon rules. Use alongside game-dev step 1, and whenever a request mentions accessibility, blind players, or screen readers.
+description: A standalone add-on layer that makes any game project playable by blind children. Applies on top of a new project (e.g. one built with game-dev) or retrofits an existing game; instantiates a docs/accessibility.md contract and enforces two independent audio channels, a self-voicing first-launch narration question, a global narration gesture, screen-reader detection, and icon rules. Use whenever a request mentions blind players, screen readers, or making a game accessible.
 ---
 
 # Blind-Playable Game Rules
+
+This skill is an ADD-ON LAYER, not a development process: it applies on
+top of an existing game project — one just started (with
+[`game-dev`](../game-dev/) or any other process) or one already shipped —
+and makes that game playable by blind players. The base process must work
+without it; this layer only ever adds.
 
 The test behind every rule is the same: **"Can this game be played without
 ever looking at the screen — by ear alone?"** Big-and-high-contrast design
@@ -140,10 +146,20 @@ Target: low-vision children first-class; blind children playable.
 - Date / version / findings: <fill in>
 ```
 
-## Relationship to the game-dev skill
+## How to layer it
 
-In [`game-dev`](../game-dev/) step 1 (design doc), instantiate this
-template as `docs/accessibility.md`; in step 3's architecture the
-`sfx.dart` / `speech.dart` split and the first-launch question enter the
-scaffold from day one. These rules are a superset of the design doc's
-accessibility principles table — where they conflict, this skill wins.
+This skill has no hard dependency on any base process. Two ways to use it:
+
+- **New project (e.g. with [`game-dev`](../game-dev/)):** when discovery
+  puts blind players in scope, instantiate `docs/accessibility.md` while
+  the design doc is written; the audio-channel split, the first-launch
+  question, and the gesture enter the scaffold from day one. game-dev is
+  complete without this layer — add it only when blind playability is a
+  goal.
+- **Retrofit an existing game:** apply Rules 1→7 in order — split the
+  audio channels first, then first contact + gesture, then spoken
+  counterparts and icons; write the `docs/accessibility.md` contract and
+  close with an eyes-closed run.
+
+While this layer is active, its rules stack on top of the base process's
+accessibility principles — where they conflict, this layer wins.
