@@ -33,6 +33,12 @@ dynamic** (make it honestly educational — real-world trade-offs like
 cheap-but-slow vs instant-but-pricey, wages, operating costs), an ASCII
 screen layout, art direction + logo concept, and an M1→M4 roadmap.
 
+In the same step, open the [`blind-playable-games`](../blind-playable-games/)
+skill and instantiate its template as `docs/accessibility.md` — the contract
+for two independent audio channels, the self-voicing first-launch narration
+question, the global narration gesture, screen-reader detection, and icon
+rules. The design doc references that contract.
+
 ### Accessibility principles (non-negotiable in every game)
 
 - **Double coding:** no information travels by color alone — every item gets
